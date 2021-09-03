@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+    maven { url = 'https://maven.izzel.io/releases' }
+    maven { url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' }
+}
+
+dependencies {
+    implementation 'io.izzel.arclight:arclight-api:1.1.+'
+    implementation 'org.ow2.asm:asm:9.2'
+    implementation 'org.ow2.asm:asm-tree:9.2'
+    implementation 'org.spigotmc:spigot-api:1.16.5-R0.1-SNAPSHOT'
+}
+
+jar {
+    manifest.attributes 'Implementation-Version': project.version
+    into('/') {
+        it.from(project(':patcher-definition').tasks.getByName('jar').outputs.files.collect())
+        it.rename { name -> 'definition.jar' }
+    }
+    dependsOn(project(':patcher-definition').tasks.getByName('jar'))
+}
+
+processResources {
+    def props = [version: project.version]
+    inputs.properties props
+    expand props
+    filteringCharset 'UTF-8'
+    filesMatching('plugin.yml') {
+        expand props
+    }
+}

@@ -1,0 +1,4 @@
+rootProject.name = 'patcher'
+include 'patcher-definition'
+include 'patcher-loader'
+

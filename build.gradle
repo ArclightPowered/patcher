@@ -1,0 +1,10 @@
+plugins {
+    id 'java'
+}
+
+allprojects {
+    group 'io.izzel.arclight'
+    version '1.0.0'
+
+    sourceCompatibility = targetCompatibility = JavaVersion.VERSION_1_8
+}

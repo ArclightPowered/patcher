@@ -50,6 +50,17 @@ public class WorldEdit {
         }
     }
 
+    public static void handlePickName(ClassNode node, PluginPatcher.ClassRepo repo) {
+        for (MethodNode method : node.methods) {
+            if (method.name.equals("pickName")) {
+                method.instructions.clear();
+                method.instructions.add(new VarInsnNode(Opcodes.ALOAD, 1));
+                method.instructions.add(new InsnNode(Opcodes.ARETURN));
+                return;
+            }
+        }
+    }
+
     private static void handleAdapt(ClassNode node, MethodNode standardize, MethodNode method) {
         switch (method.desc) {
             case "(Lcom/sk89q/worldedit/world/item/ItemType;)Lorg/bukkit/Material;":

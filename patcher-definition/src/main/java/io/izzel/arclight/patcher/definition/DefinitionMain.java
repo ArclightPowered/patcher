@@ -16,6 +16,7 @@ public class DefinitionMain implements PluginPatcher {
 
     static {
         SPECIFIC.put("com/sk89q/worldedit/bukkit/BukkitAdapter", WorldEdit::handleBukkitAdapter);
+        SPECIFIC.put("com/sk89q/worldedit/bukkit/adapter/Refraction", WorldEdit::handlePickName);
         GENERAL.add(WorldEdit::handleGetProperties);
         GENERAL.add(WorldEdit::handleWatchdog);
     }

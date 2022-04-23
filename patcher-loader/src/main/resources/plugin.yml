@@ -1,6 +1,6 @@
 name: ArclightPatcher
 main: io.izzel.arclight.patcher.PluginMain
 version: ${version}
-api-version: 1.16
+api-version: 1.18
 arclight:
   patcher: io.izzel.arclight.patcher.PatcherMain

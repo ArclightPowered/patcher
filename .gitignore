@@ -114,3 +114,6 @@ gradle-app.setting
 # gradle/wrapper/gradle-wrapper.properties
 
 .idea/
+
+# workload directory
+tmp/

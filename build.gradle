@@ -6,5 +6,20 @@ allprojects {
     group 'io.izzel.arclight'
     version '1.0.0'
 
-    sourceCompatibility = targetCompatibility = JavaVersion.VERSION_1_8
+    def getGitHash = { ->
+        def stdout = new ByteArrayOutputStream()
+        exec {
+            commandLine 'git', 'rev-parse', '--short', 'HEAD'
+            standardOutput = stdout
+        }
+        return stdout.toString().trim()
+    }
+
+    ext {
+        minecraftVersion = '1.18.2'
+        apiVersion = '1.2.6'
+        gitHash = getGitHash()
+    }
+
+    sourceCompatibility = targetCompatibility = JavaVersion.VERSION_17
 }

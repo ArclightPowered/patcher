@@ -8,21 +8,12 @@ repositories {
 }
 
 dependencies {
-    implementation 'io.izzel.arclight:arclight-api:1.1.+'
+    implementation group: 'io.izzel.arclight', name: 'arclight-api', version: "${apiVersion}"
     implementation 'org.ow2.asm:asm:9.2'
     implementation 'org.ow2.asm:asm-tree:9.2'
     implementation 'org.ow2.asm:asm-commons:9.2'
 }
 
-def getGitHash = { ->
-    def stdout = new ByteArrayOutputStream()
-    exec {
-        commandLine 'git', 'rev-parse', '--short', 'HEAD'
-        standardOutput = stdout
-    }
-    return stdout.toString().trim()
-}
-
 jar {
-    manifest.attributes 'Implementation-Version': getGitHash()
+    manifest.attributes 'Implementation-Version': gitHash
 }

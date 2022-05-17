@@ -114,3 +114,9 @@ gradle-app.setting
 # gradle/wrapper/gradle-wrapper.properties
 
 .idea/
+
+# Eclipse
+bin/
+.settings/
+.classpath
+.project

@@ -12,7 +12,7 @@ dependencies {
     implementation 'io.izzel.arclight:arclight-api:1.2.+'
     implementation 'org.ow2.asm:asm:9.2'
     implementation 'org.ow2.asm:asm-tree:9.2'
-    implementation 'org.spigotmc:spigot-api:1.18.1-R0.1-SNAPSHOT'
+    implementation 'org.spigotmc:spigot-api:1.18.2-R0.1-SNAPSHOT'
 }
 
 jar {

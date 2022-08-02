@@ -16,12 +16,9 @@ if you want to patch other plugins not properly working on Arclight.
 
 ### Build
 
-The build uses Spigot-API, so you don't have to build it with buildtools.   
-However, if an error arises, try building it again with done with buidtools.   
-If you're using prebuilt spigot binary on your PC,   
-add `mavenLocal()` to the repositories in `patcher-loader/build.gradle`.
+The build uses Spigot-API, so you don't have to build it with buildtools.
 
-1. You'll want to make your clone _(you can download the source code too)_ of this repo.   
+1. You'll want to make your clone _(don't just download- the build will fail if you just download it)_ of this repo.   
 I'll recommend creating your own fork before cloning, and work on that fork.
 2. If you want to customize it, you'll want to head up to two `build.gradle`, one at the root and the other in `patcher-loader`.   
 You can manage the build distributions with some uncommenting (removing `//`) and commenting (adding `//` at the very first of the very line).   

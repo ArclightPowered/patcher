@@ -39,7 +39,7 @@ You can manage the build distributions with some uncommenting (removing `//`) an
 If you didn't, just install Java 17. That's the default.   
 Don't forget to add their `bin` directory to `PATH`!
     > *Note: You don't have to configure this if you've set up the IDE.*
-4. Do `gradlew build`.
+4. Do `gradlew build`. Note that you can also use `gradlew jar`.
     > OS-specific:
     > * Windows CMD: `gradlew.bat build`
     > * Windows Powershell: `.\gradlew.bat build`

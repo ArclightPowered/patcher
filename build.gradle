@@ -6,5 +6,7 @@ allprojects {
     group 'io.izzel.arclight'
     version '1.0.1'
 
-    sourceCompatibility = targetCompatibility = JavaVersion.VERSION_17
+    //sourceCompatibility = targetCompatibility = JavaVersion.VERSION_1_8 //for up to 1.16
+    //sourceCompatibility = targetCompatibility = JavaVersion.VERSION_16 //for 1.17 & 1.17.1
+    sourceCompatibility = targetCompatibility = JavaVersion.VERSION_17 //for 1.18+
 }

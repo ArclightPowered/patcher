@@ -4,14 +4,6 @@
 You'll have to code it yourself, with looking through Arclight API & Spigot API,   
 if you want to patch other plugins not properly working on Arclight.
 
-### Get Pre-built Binaries
-
-Head to Releases, and grab some.   
-You should make your own build if you're using customized server.   
-(for example, your server is at 1.15.2)
-
-Please note that this binary would support you **only when you're on Java 17**.
-
 ### Update Instructions
 
 **WARN**: If you don't remove `{server-root}/.arclight/patcher` directory, the new patch won't apply! 
